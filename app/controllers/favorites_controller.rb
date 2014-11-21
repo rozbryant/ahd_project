@@ -15,7 +15,8 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new
     @favorite.user_id = params[:user_id]
     @favorite.building_id = params[:building_id]
-    @favorite.neighborhood_id = params[:neighborhood_id]
+    @favorite.created_at = params[:created_at]
+    @favorite.updated_at = params[:updated_at]
 
     if @favorite.save
       redirect_to "/favorites", :notice => "Favorite created successfully."
@@ -33,7 +34,8 @@ class FavoritesController < ApplicationController
 
     @favorite.user_id = params[:user_id]
     @favorite.building_id = params[:building_id]
-    @favorite.neighborhood_id = params[:neighborhood_id]
+    @favorite.created_at = params[:created_at]
+    @favorite.updated_at = params[:updated_at]
 
     if @favorite.save
       redirect_to "/favorites", :notice => "Favorite updated successfully."

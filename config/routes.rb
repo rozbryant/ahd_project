@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+  # Routes for the Favorite resource:
+  # CREATE
+  get('/favorites/new', { :controller => 'favorites', :action => 'new' })
+  get('/create_favorite', { :controller => 'favorites', :action => 'create' })
+
+  # READ
+  get('/favorites', { :controller => 'favorites', :action => 'index' })
+  get('/favorites/:id', { :controller => 'favorites', :action => 'show' })
+
+  # UPDATE
+  get('/favorites/:id/edit', { :controller => 'favorites', :action => 'edit' })
+  get('/update_favorite/:id', { :controller => 'favorites', :action => 'update' })
+
+  # DELETE
+  get('/delete_favorite/:id', { :controller => 'favorites', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Address resource:
+  # CREATE
+  get('/addresses/new', { :controller => 'addresses', :action => 'new' })
+  get('/create_address', { :controller => 'addresses', :action => 'create' })
+
+  # READ
+  get('/addresses', { :controller => 'addresses', :action => 'index' })
+  get('/addresses/:id', { :controller => 'addresses', :action => 'show' })
+
+  # UPDATE
+  get('/addresses/:id/edit', { :controller => 'addresses', :action => 'edit' })
+  get('/update_address/:id', { :controller => 'addresses', :action => 'update' })
+
+  # DELETE
+  get('/delete_address/:id', { :controller => 'addresses', :action => 'destroy' })
+  #------------------------------
+
   # Routes for the Restriction resource:
   # CREATE
   get('/restrictions/new', { :controller => 'restrictions', :action => 'new' })
@@ -84,40 +118,6 @@ Rails.application.routes.draw do
 
   # DELETE
   get('/delete_neighborhood/:id', { :controller => 'neighborhoods', :action => 'destroy' })
-  #------------------------------
-
-  # Routes for the Address resource:
-  # CREATE
-  get('/addresses/new', { :controller => 'addresses', :action => 'new' })
-  get('/create_address', { :controller => 'addresses', :action => 'create' })
-
-  # READ
-  get('/addresses', { :controller => 'addresses', :action => 'index' })
-  get('/addresses/:id', { :controller => 'addresses', :action => 'show' })
-
-  # UPDATE
-  get('/addresses/:id/edit', { :controller => 'addresses', :action => 'edit' })
-  get('/update_address/:id', { :controller => 'addresses', :action => 'update' })
-
-  # DELETE
-  get('/delete_address/:id', { :controller => 'addresses', :action => 'destroy' })
-  #------------------------------
-
-  # Routes for the Favorite resource:
-  # CREATE
-  get('/favorites/new', { :controller => 'favorites', :action => 'new' })
-  get('/create_favorite', { :controller => 'favorites', :action => 'create' })
-
-  # READ
-  get('/favorites', { :controller => 'favorites', :action => 'index' })
-  get('/favorites/:id', { :controller => 'favorites', :action => 'show' })
-
-  # UPDATE
-  get('/favorites/:id/edit', { :controller => 'favorites', :action => 'edit' })
-  get('/update_favorite/:id', { :controller => 'favorites', :action => 'update' })
-
-  # DELETE
-  get('/delete_favorite/:id', { :controller => 'favorites', :action => 'destroy' })
   #------------------------------
 
   # Routes for the User resource:
