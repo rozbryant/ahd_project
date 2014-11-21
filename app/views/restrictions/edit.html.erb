@@ -1,0 +1,110 @@
+<div class="page-header">
+  <h1>Edit Restriction #<%= @restriction.id %></h1>
+</div>
+
+<% if @restriction.errors.any? %>
+  <% @restriction.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<form action="/update_restriction/<%= @restriction.id %>" class="form-horizontal">
+  <!-- Label and input for building_id -->
+  <div class="form-group">
+    <label for="building_id" class="col-sm-2 control-label">
+      Building
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="building_id" name="building_id" placeholder="Building" class="form-control" value="<%= @restriction.building_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for pet -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="pet">
+          <input type="checkbox" id="pet" name="pet" value="1" <%= "checked" if @restriction.pet %>>
+          Pet
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for rental -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="rental">
+          <input type="checkbox" id="rental" name="rental" value="1" <%= "checked" if @restriction.rental %>>
+          Rental
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for credit -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="credit">
+          <input type="checkbox" id="credit" name="credit" value="1" <%= "checked" if @restriction.credit %>>
+          Credit
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for reference -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="reference">
+          <input type="checkbox" id="reference" name="reference" value="1" <%= "checked" if @restriction.reference %>>
+          Reference
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for interview -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="interview">
+          <input type="checkbox" id="interview" name="interview" value="1" <%= "checked" if @restriction.interview %>>
+          Interview
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for created_at -->
+  <div class="form-group">
+    <label for="created_at" class="col-sm-2 control-label">
+      Created at
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="created_at" name="created_at" placeholder="Created at" class="form-control" value="<%= @restriction.created_at %>">
+    </div>
+  </div>
+
+  <!-- Label and input for updated_at -->
+  <div class="form-group">
+    <label for="updated_at" class="col-sm-2 control-label">
+      Updated at
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="updated_at" name="updated_at" placeholder="Updated at" class="form-control" value="<%= @restriction.updated_at %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Restriction" class="btn btn-primary">
+    </div>
+  </div>
+</form>

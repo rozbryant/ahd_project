@@ -1,0 +1,291 @@
+<div class="page-header">
+  <h1>Add Amenity</h1>
+</div>
+
+<% if @amenity.errors.any? %>
+  <% @amenity.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<form action="/create_amenity" class="form-horizontal">
+  <!-- Label and input for building_id -->
+  <div class="form-group">
+    <label for="building_id" class="col-sm-2 control-label">
+      Building
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="building_id" name="building_id" placeholder="Building" class="form-control" value="<%= @amenity.building_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for parking -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="parking">
+          <input type="checkbox" id="parking" name="parking" value="1" <%= "checked" if @amenity.parking %>>
+          Parking
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for guest_parking -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="guest_parking">
+          <input type="checkbox" id="guest_parking" name="guest_parking" value="1" <%= "checked" if @amenity.guest_parking %>>
+          Guest parking
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for doorperson -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="doorperson">
+          <input type="checkbox" id="doorperson" name="doorperson" value="1" <%= "checked" if @amenity.doorperson %>>
+          Doorperson
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for fitness -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="fitness">
+          <input type="checkbox" id="fitness" name="fitness" value="1" <%= "checked" if @amenity.fitness %>>
+          Fitness
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for biz_center -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="biz_center">
+          <input type="checkbox" id="biz_center" name="biz_center" value="1" <%= "checked" if @amenity.biz_center %>>
+          Biz center
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for pool -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="pool">
+          <input type="checkbox" id="pool" name="pool" value="1" <%= "checked" if @amenity.pool %>>
+          Pool
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for package_receiving -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="package_receiving">
+          <input type="checkbox" id="package_receiving" name="package_receiving" value="1" <%= "checked" if @amenity.package_receiving %>>
+          Package receiving
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for catering -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="catering">
+          <input type="checkbox" id="catering" name="catering" value="1" <%= "checked" if @amenity.catering %>>
+          Catering
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for housekeeping -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="housekeeping">
+          <input type="checkbox" id="housekeeping" name="housekeeping" value="1" <%= "checked" if @amenity.housekeeping %>>
+          Housekeeping
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for party_room -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="party_room">
+          <input type="checkbox" id="party_room" name="party_room" value="1" <%= "checked" if @amenity.party_room %>>
+          Party room
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for bike_storage -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="bike_storage">
+          <input type="checkbox" id="bike_storage" name="bike_storage" value="1" <%= "checked" if @amenity.bike_storage %>>
+          Bike storage
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for storage -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="storage">
+          <input type="checkbox" id="storage" name="storage" value="1" <%= "checked" if @amenity.storage %>>
+          Storage
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for dry_cleaning -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="dry_cleaning">
+          <input type="checkbox" id="dry_cleaning" name="dry_cleaning" value="1" <%= "checked" if @amenity.dry_cleaning %>>
+          Dry cleaning
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for conf_room -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="conf_room">
+          <input type="checkbox" id="conf_room" name="conf_room" value="1" <%= "checked" if @amenity.conf_room %>>
+          Conf room
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for sundeck -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="sundeck">
+          <input type="checkbox" id="sundeck" name="sundeck" value="1" <%= "checked" if @amenity.sundeck %>>
+          Sundeck
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for spa -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="spa">
+          <input type="checkbox" id="spa" name="spa" value="1" <%= "checked" if @amenity.spa %>>
+          Spa
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for guest_stay -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="guest_stay">
+          <input type="checkbox" id="guest_stay" name="guest_stay" value="1" <%= "checked" if @amenity.guest_stay %>>
+          Guest stay
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for restaurant -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="restaurant">
+          <input type="checkbox" id="restaurant" name="restaurant" value="1" <%= "checked" if @amenity.restaurant %>>
+          Restaurant
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for private_club -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="private_club">
+          <input type="checkbox" id="private_club" name="private_club" value="1" <%= "checked" if @amenity.private_club %>>
+          Private club
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for concierge -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="concierge">
+          <input type="checkbox" id="concierge" name="concierge" value="1" <%= "checked" if @amenity.concierge %>>
+          Concierge
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for created_at -->
+  <div class="form-group">
+    <label for="created_at" class="col-sm-2 control-label">
+      Created at
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="created_at" name="created_at" placeholder="Created at" class="form-control" value="<%= @amenity.created_at %>">
+    </div>
+  </div>
+
+  <!-- Label and input for updated_at -->
+  <div class="form-group">
+    <label for="updated_at" class="col-sm-2 control-label">
+      Updated at
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="updated_at" name="updated_at" placeholder="Updated at" class="form-control" value="<%= @amenity.updated_at %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Amenity" class="btn btn-primary">
+    </div>
+  </div>
+</form>

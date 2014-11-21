@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1>Restrictions</h1>
+</div>
+
+<p><a href="/restrictions/new" class="btn btn-primary">Add a New Restriction</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Building</th>
+      <th>Pet</th>
+      <th>Rental</th>
+      <th>Credit</th>
+      <th>Reference</th>
+      <th>Interview</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restrictions.each do |restriction| %>
+      <tr>
+        <td><%= restriction.building_id %></td>
+        <td><%= restriction.pet %></td>
+        <td><%= restriction.rental %></td>
+        <td><%= restriction.credit %></td>
+        <td><%= restriction.reference %></td>
+        <td><%= restriction.interview %></td>
+        <td><%= restriction.created_at %></td>
+        <td><%= restriction.updated_at %></td>
+        <td>
+          <a href="/restrictions/<%= restriction.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/restrictions/<%= restriction.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_restriction/<%= restriction.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

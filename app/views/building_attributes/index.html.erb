@@ -1,0 +1,52 @@
+<div class="page-header">
+  <h1>Building attributes</h1>
+</div>
+
+<p><a href="/building_attributes/new" class="btn btn-primary">Add a New Building Attribute</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Building</th>
+      <th>Ownership</th>
+      <th>Unit count</th>
+      <th>Stories</th>
+      <th>Notes</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @building_attributes.each do |building_attribute| %>
+      <tr>
+        <td><%= building_attribute.building_id %></td>
+        <td><%= building_attribute.ownership %></td>
+        <td><%= building_attribute.unit_count %></td>
+        <td><%= building_attribute.stories %></td>
+        <td><%= building_attribute.notes %></td>
+        <td><%= building_attribute.created_at %></td>
+        <td><%= building_attribute.updated_at %></td>
+        <td>
+          <a href="/building_attributes/<%= building_attribute.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/building_attributes/<%= building_attribute.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_building_attribute/<%= building_attribute.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

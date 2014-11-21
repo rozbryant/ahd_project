@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  building_id: MyString
+  ownership: MyString
+  unit_count: 1
+  stories: 1
+  notes: MyText
+  year_built: 2014-11-21 11:31:08
+  created_at: 2014-11-21 11:31:08
+  updated_at: 2014-11-21 11:31:08
+
+two:
+  building_id: MyString
+  ownership: MyString
+  unit_count: 1
+  stories: 1
+  notes: MyText
+  year_built: 2014-11-21 11:31:08
+  created_at: 2014-11-21 11:31:08
+  updated_at: 2014-11-21 11:31:08

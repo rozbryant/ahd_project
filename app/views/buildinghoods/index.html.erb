@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1>Buildinghoods</h1>
+</div>
+
+<p><a href="/buildinghoods/new" class="btn btn-primary">Add a New Buildinghood</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Building</th>
+      <th>Neighborhood</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buildinghoods.each do |buildinghood| %>
+      <tr>
+        <td><%= buildinghood.building_id %></td>
+        <td><%= buildinghood.neighborhood_id %></td>
+        <td><%= buildinghood.created_at %></td>
+        <td><%= buildinghood.updated_at %></td>
+        <td>
+          <a href="/buildinghoods/<%= buildinghood.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/buildinghoods/<%= buildinghood.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_buildinghood/<%= buildinghood.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,84 @@
+<div class="page-header">
+  <h1>Amenities</h1>
+</div>
+
+<p><a href="/amenities/new" class="btn btn-primary">Add a New Amenity</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Building</th>
+      <th>Parking</th>
+      <th>Guest parking</th>
+      <th>Doorperson</th>
+      <th>Fitness</th>
+      <th>Biz center</th>
+      <th>Pool</th>
+      <th>Package receiving</th>
+      <th>Catering</th>
+      <th>Housekeeping</th>
+      <th>Party room</th>
+      <th>Bike storage</th>
+      <th>Storage</th>
+      <th>Dry cleaning</th>
+      <th>Conf room</th>
+      <th>Sundeck</th>
+      <th>Spa</th>
+      <th>Guest stay</th>
+      <th>Restaurant</th>
+      <th>Private club</th>
+      <th>Concierge</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amenities.each do |amenity| %>
+      <tr>
+        <td><%= amenity.building_id %></td>
+        <td><%= amenity.parking %></td>
+        <td><%= amenity.guest_parking %></td>
+        <td><%= amenity.doorperson %></td>
+        <td><%= amenity.fitness %></td>
+        <td><%= amenity.biz_center %></td>
+        <td><%= amenity.pool %></td>
+        <td><%= amenity.package_receiving %></td>
+        <td><%= amenity.catering %></td>
+        <td><%= amenity.housekeeping %></td>
+        <td><%= amenity.party_room %></td>
+        <td><%= amenity.bike_storage %></td>
+        <td><%= amenity.storage %></td>
+        <td><%= amenity.dry_cleaning %></td>
+        <td><%= amenity.conf_room %></td>
+        <td><%= amenity.sundeck %></td>
+        <td><%= amenity.spa %></td>
+        <td><%= amenity.guest_stay %></td>
+        <td><%= amenity.restaurant %></td>
+        <td><%= amenity.private_club %></td>
+        <td><%= amenity.concierge %></td>
+        <td><%= amenity.created_at %></td>
+        <td><%= amenity.updated_at %></td>
+        <td>
+          <a href="/amenities/<%= amenity.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/amenities/<%= amenity.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_amenity/<%= amenity.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
