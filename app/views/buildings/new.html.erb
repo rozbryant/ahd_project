@@ -29,7 +29,7 @@
       Address
     </label>
     <div class="col-sm-10">
-    <%= select_tag(:address_id, options_from_collection_for_select(Address.all, :id, :name, @building.address_id), :class => "form-control") %>
+    <%= select_tag(:address_id, options_from_collection_for_select(Address.all, :id, :streetaddress, @building.address_id), :class => "form-control") %>
 
     </div>
   </div>

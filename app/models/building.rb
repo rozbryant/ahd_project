@@ -8,11 +8,11 @@ class Building < ActiveRecord::Base
 
   has_one :building_attribute
 
+
+
 # One-to-many relationships
 
-  has_many :addresses
-
-  has_many :neighborhoods, :through => :buildinghoods
+  has_many :buildinghoods, :through => :neighborhoods
 
 # Validations
 
