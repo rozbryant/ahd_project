@@ -23,7 +23,7 @@
   <tbody>
     <% @building_attributes.each do |building_attribute| %>
       <tr>
-        <td><%= building_attribute.building_id %></td>
+        <td><%= building_attribute.building.name %></td>
         <td><%= building_attribute.ownership %></td>
         <td><%= building_attribute.unit_count %></td>
         <td><%= building_attribute.stories %></td>

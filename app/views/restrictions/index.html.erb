@@ -24,7 +24,7 @@
   <tbody>
     <% @restrictions.each do |restriction| %>
       <tr>
-        <td><%= restriction.building_id %></td>
+        <td><%= restriction.building.name %></td>
         <td><%= restriction.pet %></td>
         <td><%= restriction.rental %></td>
         <td><%= restriction.credit %></td>

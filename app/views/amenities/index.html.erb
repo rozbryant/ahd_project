@@ -2,7 +2,7 @@
   <h1>Amenities</h1>
 </div>
 
-<p><a href="/amenities/new" class="btn btn-primary">Add a New Amenity</a></p>
+<p><a href="/amenities/new" class="btn btn-primary">Add Building Amenities</a></p>
 
 <table class="table table-hover">
   <thead>
@@ -39,7 +39,7 @@
   <tbody>
     <% @amenities.each do |amenity| %>
       <tr>
-        <td><%= amenity.building_id %></td>
+        <td><%= amenity.building.name %></td>
         <td><%= amenity.parking %></td>
         <td><%= amenity.guest_parking %></td>
         <td><%= amenity.doorperson %></td>
