@@ -20,8 +20,8 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
-        <td><%= favorite.user.name %></td>
-        <td><%= favorite.building.name %></td>
+        <td><%= favorite.user_id %></td>
+        <td><%= favorite.building_id %></td>
         <td><%= favorite.created_at %></td>
         <td><%= favorite.updated_at %></td>
         <td>
